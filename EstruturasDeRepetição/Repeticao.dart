@@ -8,5 +8,6 @@ void main() {
   while (contador != 1) {
     contador = contador - 1;
     print('Loop -> $contador');
+    break;
   }
 }

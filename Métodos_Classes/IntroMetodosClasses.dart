@@ -5,6 +5,10 @@ void main() {
 
   print(celular.toString());
   print(celular2.toString());
+
+  double resultado = celular.ValorDoCelular(2000);
+  print(resultado);
+  // print(celular.ValorDoCelular(2000));
 }
 
 class Celular {
@@ -14,10 +18,14 @@ class Celular {
   final double peso;
 
   // Construtor
-  Celular(this.cor, this.qtdProcessadores, this.tamanho, this.peso);
+  Celular(this.cor, this.qtdProcessadores, this.peso, this.tamanho);
 
   // Metodos
   String toString() {
     return "Cor $cor, qtdPros $qtdProcessadores, Peso $peso, Tamanho $tamanho";
+  }
+
+  double ValorDoCelular(double valor) {
+    return valor * qtdProcessadores;
   }
 }
